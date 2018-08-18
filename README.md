@@ -19,6 +19,7 @@ You can also visualise the decision tree if you have graphviz installed.
 
 
 Required Python dependencies:
+
 * requests
 * scikit-learn
 

@@ -15,7 +15,7 @@ try:
 	num_entries = len(data)
 	print("Retrieved {} data points successfully.".format(num_entries))
 	added = 0 # The number of entries successfully added
-	excluded = 0 # The numeber of entries discarded 
+	excluded = 0 # The numeber of entries discarded
 
 	# Creating two sets for our data
 	X = [] # The input variables [passenger class, age, sex]
@@ -35,13 +35,13 @@ try:
 		except:
 			excluded += 1
 
-	# Check data import successfulness 
+	# Check data import successfulness
 	print("Added: {}\tExcluded: {}\tMissing: {}".format(
 		added, excluded, num_entries - added - excluded
 		))
 
 	# instantiate classifier
-	classifier = tree.DecisionTreeClassifier()
+	classifier = tree.DecisionTreeClassifier(max_depth=5)
 
 	# fit X to Y
 	classifier = classifier.fit(X, Y)
